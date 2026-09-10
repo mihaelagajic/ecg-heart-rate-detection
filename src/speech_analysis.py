@@ -8,7 +8,6 @@ import pandas as pd
 # 1. Učitavanje audio signala
 
 audio_path = r'Audio and ECG-20260611T153310Z-3-001\Audio and ECG\Zmaj 1 relaxed\Zmaj 1 relaxed.wav'
-
 signal, sr = librosa.load(
     audio_path,
     sr=None
@@ -33,10 +32,7 @@ plt.tight_layout()
 plt.show()
 
 
-
-# ---------------------------------------
 # 3. MFCC karakteristike
-# ---------------------------------------
 
 mfcc = librosa.feature.mfcc(
     y=signal,
@@ -93,7 +89,6 @@ plt.show()
 mfcc_mean = np.mean(mfcc, axis=1)
 mfcc_std = np.std(mfcc, axis=1)
 
-
 print("Srednje vrijednosti MFCC:")
 print(mfcc_mean)
 
@@ -101,15 +96,11 @@ print("Standardne devijacije MFCC:")
 print(mfcc_std)
 
 
-
-# ---------------------------------------
 # 4. RMS energija
-# ---------------------------------------
 
 rms = librosa.feature.rms(
     y=signal
 )
-
 
 plt.figure(figsize=(10,4))
 
@@ -127,20 +118,14 @@ plt.grid(True)
 plt.show()
 
 
-
-print("Srednja RMS energija:",
-      np.mean(rms))
+print("Srednja RMS energija:", np.mean(rms))
 
 
-
-# ---------------------------------------
 # 5. Zero Crossing Rate
-# ---------------------------------------
 
 zcr = librosa.feature.zero_crossing_rate(
     signal
 )
-
 
 plt.figure(figsize=(10,4))
 
@@ -157,16 +142,10 @@ plt.grid(True)
 
 plt.show()
 
+print("Srednji ZCR:", np.mean(zcr))
 
 
-print("Srednji ZCR:",
-      np.mean(zcr))
-
-
-
-# ==========================
 # Procjena osnovne frekvencije (Pitch)
-# ==========================
 
 # Procena F0 pomoću YIN algoritma
 pitch = librosa.yin(
@@ -199,15 +178,12 @@ plt.tight_layout()
 plt.show()
 
 
-# ---------------------------------------
 # 7. Spektralni centroid
-# ---------------------------------------
 
 centroid = librosa.feature.spectral_centroid(
     y=signal,
     sr=sr
 )
-
 
 plt.figure(figsize=(10,4))
 
@@ -224,9 +200,7 @@ plt.grid(True)
 
 plt.show()
 
-print("Srednji spektralni centroid:",
-      np.mean(centroid),
-      "Hz")
+print("Srednji spektralni centroid:", np.mean(centroid), "Hz")
 
 results = pd.DataFrame({
 
