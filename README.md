@@ -102,4 +102,6 @@ Possible extensions of the project include:
 
 This project was developed as part of the **Clinical Engineering** course at the University of Belgrade – School of Electrical Engineering (ETF), during the 2025/2026 academic year.
 
-## The original ECG and audio recordings are not included in this repository because they are experimental data.
+## Data Availability
+
+The original ECG and audio recordings are not included in this repository because they contain experimental human-subject data. The analysis scripts are provided without the original recordings.
