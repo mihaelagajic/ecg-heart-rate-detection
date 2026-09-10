@@ -83,7 +83,8 @@ A detailed description of the methodology, signal processing procedures, results
 
 The study was based on a limited number of recordings and subjects. The speech material was predefined and the physiological response to stress may differ between individuals.
 
-The analysis mainly considered average feature values, while a more detailed time-dependent analysis and statistical modeling could provide additional information.
+The analysis mainly considered average feature values, while a more detailed time-dependent analysis and statistical modeling could provide additional 
+information.
 
 ## Future Work
 
@@ -100,3 +101,5 @@ Possible extensions of the project include:
 ## Academic Context
 
 This project was developed as part of the **Clinical Engineering** course at the University of Belgrade – School of Electrical Engineering (ETF), during the 2025/2026 academic year.
+
+## The original ECG and audio recordings are not included in this repository because they are experimental data.
