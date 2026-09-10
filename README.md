@@ -1,5 +1,3 @@
-# ecg-heart-rate-detection
-
 # ECG-Based Heart Rate Analysis and Speech Signal Processing
 
 ## Overview
